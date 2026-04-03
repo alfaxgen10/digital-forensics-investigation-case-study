@@ -1,0 +1,50 @@
+# Tools Used
+
+This project utilized a range of industry-standard forensic tools to simulate a real-world DFIR (Digital Forensics & Incident Response) workflow.  
+Each tool contributed to different phases of acquisition, analysis, and reporting.
+
+---
+
+## 🛰️ Wireshark
+- **Purpose**: Captures and analyzes network traffic.
+- **Usage in project**: Identified suspicious connections and anomalous packets that indicated potential malicious activity.
+- **Outcome**: Helped correlate network behavior with malware artifacts found in memory and disk.
+
+---
+
+## 💾 FTK Imager
+- **Purpose**: Creates forensic disk images and preserves evidence.
+- **Usage in project**: Acquired HDD images while maintaining integrity and chain of custody.
+- **Outcome**: Provided a reliable baseline for file system analysis and artifact recovery.
+
+---
+
+## 🔍 Autopsy
+- **Purpose**: Open-source forensic suite for file system and timeline analysis.
+- **Usage in project**: Examined disk images, reconstructed user activity, and identified deleted files.
+- **Outcome**: Built a timeline of events that supported malware execution evidence.
+
+---
+
+## 🧠 Volatility
+- **Purpose**: Memory forensics framework for analyzing RAM dumps.
+- **Usage in project**: Detected malicious processes, hidden DLLs, and suspicious handles in memory.
+- **Outcome**: Confirmed malware presence and provided insight into runtime behavior.
+
+---
+
+## 🛡️ VirusTotal
+- **Purpose**: Online malware scanning and threat intelligence correlation.
+- **Usage in project**: Verified suspicious files and processes against known malware signatures.
+- **Outcome**: Strengthened findings by cross-referencing with external threat intelligence.
+
+---
+
+## 📑 Integration
+By combining outputs from these tools:
+- Network anomalies (Wireshark) were linked to malicious processes (Volatility).
+- Disk artifacts (Autopsy, FTK Imager) validated malware persistence.
+- External intelligence (VirusTotal) confirmed malicious indicators.
+- All findings were documented with proper chain of custody for admissibility.
+
+---
